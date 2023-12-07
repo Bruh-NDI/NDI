@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import Home from './Pages/Home/Home.tsx'
+import Map from './Pages/Map/Map.tsx'
 
 import "./main.css"
 import '@mantine/core/styles.css';
@@ -11,6 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <BrowserRouter>
             <Routes>
                 <Route path={"/"} element={<Home/>}/>
+                <Route path={"/map"} element={<Map/>}/>
             </Routes>
         </BrowserRouter>
     </MantineProvider>
