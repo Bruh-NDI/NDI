@@ -3,9 +3,10 @@ type PersonnageProps = {
     path: string
     alt : string
     position: string
+    talking: boolean
 }
 
-export function Personnage({ path, id, alt, position }: PersonnageProps) {
+export function Personnage({ path, id, alt, position, talking }: PersonnageProps) {
     const isOnRight = position === 'right';
 
     return (
@@ -13,7 +14,7 @@ export function Personnage({ path, id, alt, position }: PersonnageProps) {
             <img
                 src={path}
                 alt={alt}
-                className={`h-1/3 absolute bottom-0 ${isOnRight ? 'right-0' : 'left-0'}`}
+                className={`h-1/3 absolute bottom-0 ${isOnRight ? 'right-0' : 'left-0'} ${talking ? '' : 'opacity-60'}`}
             />
         </div>
     );
