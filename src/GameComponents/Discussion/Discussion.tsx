@@ -11,7 +11,7 @@ export type QuestionProps = {
 export function Discussion({array}: ArrayOfQuestions) {
     const CurrentQuestion = 0
     return (
-        <div>
+        <div className="absolute bottom-0 flex justify-center items-center w-full">
             {showCurrentQuestion(array, CurrentQuestion)}
         </div>
     )
