@@ -9,15 +9,23 @@ export type QuestionProps = {
 }
 
 export function Discussion({array}: ArrayOfQuestions) {
+    const CurrentQuestion = 0
     return (
-        <>
-            {array.map((question) => (
-                <div id={question.id} key={question.id}>
-                    <p>{question.nomPersonnage} : {question.text}</p>
-                </div>
-            ))}
+        <div>
+            {showCurrentQuestion(array, CurrentQuestion)}
+        </div>
+    )
+}
 
-        </>
+function increaseCurrentQuestion() {
 
+}
+
+function showCurrentQuestion(array: QuestionProps[], index: number) {
+
+    return (
+        <div id={array[index].id} onClick={increaseCurrentQuestion}>
+            <p>{array[index].nomPersonnage} : {array[index].text}</p>
+        </div>
     )
 }
