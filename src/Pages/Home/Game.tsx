@@ -13,13 +13,16 @@ export default function Game() {
     const pathBG = "public/images/bg_intro.jpg"
     const [path] = "/images/president.png"
     const [endOfDialogue, setEndOfDialogue] = useState<boolean>(false)
+    const [actualDialogue, setActualDialogue] = useState<number>(0)
 
     useEffect(() => {
         if (endOfDialogue) {
-
+            setActualDialogue(actualDialogue + 1)
+            setEndOfDialogue(false)
         }
     }, [endOfDialogue])
     // console.log(endOfDialogue)
+    console.log(dialogues[actualDialogue])
     return (
         <>
             <GameBar euro={euro} co2={co2}/>
@@ -28,7 +31,7 @@ export default function Game() {
             </div>
             <Personnage id={"president"} path={pathPresident} alt={"Un président important"} position={"right"} talking={true}/>
             <Personnage id={"ministre"} path={pathMinistre} alt={"Un ministre important"} position={"left"} talking={false}/>
-            <Discussion dialogues={dialogues} setEndOfDialogue={setEndOfDialogue}/>
+            <Discussion dialogues={dialogues[actualDialogue]} setEndOfDialogue={setEndOfDialogue}/>
         </>
     )
 }

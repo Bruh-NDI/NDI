@@ -1,5 +1,5 @@
 
-export const dialogues = {
+export const dialogues: any = {
     '0': [{text: "Bonjour, monsieur le president", nomPersonnage: "Premier Ministre", id: "1"},
         {text: "Bonjour, monsieur le premier ministre", nomPersonnage: "President", id: "2"},
         {
