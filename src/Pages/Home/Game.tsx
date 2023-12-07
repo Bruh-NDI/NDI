@@ -24,8 +24,8 @@ export default function Game() {
     return (
         <>
             <GameBar euro={euro} co2={co2}/>
-            <Personnage id={"president"} path={pathPresident} alt={"Un président important"}/>
-            <Personnage id={"ministre"} path={pathMinistre} alt={"Un ministre important"}/>
+            <Personnage id={"president"} path={pathPresident} alt={"Un président important"} position={"right"}/>
+            <Personnage id={"ministre"} path={pathMinistre} alt={"Un ministre important"} position={"left"}/>
             <Scene setEuro={setEuro} euro={euro} endOfDialogue={endOfDialogue} setEndOfDialogue={setEndOfDialogue} className=""/>
         </>
     )
