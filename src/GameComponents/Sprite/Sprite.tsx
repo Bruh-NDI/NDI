@@ -6,7 +6,7 @@ type SpriteProps = {
 
 export function Sprite ({path, id, alt}: SpriteProps) {
     return (
-        <div id={id} className="h-1/3 left-0">
+        <div id={id} className="h-full w-full">
             <img src={path} alt={alt}/>
         </div>
     )
