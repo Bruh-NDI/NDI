@@ -1,13 +1,23 @@
-type QuestionProps = {
+export type ArrayOfQuestions = {
+    array: QuestionProps[]
+}
+
+export type QuestionProps = {
     nomPersonnage: string
-    question: string
+    text: string
     id: string
 }
 
-export function Discussion ({array}: QuestionProps) {
+export function Discussion({array}: ArrayOfQuestions) {
     return (
-        <div id={id}>
-            <p>{nomPersonnage} : {question}</p>
-        </div>
+        <>
+            {array.map((question) => (
+                <div id={question.id} key={question.id}>
+                    <p>{question.nomPersonnage} : {question.text}</p>
+                </div>
+            ))}
+
+        </>
+
     )
 }
