@@ -16,7 +16,7 @@ function Scene({setEuro, euro, endOfDialogue, setEndOfDialogue}: any) {
 export default function Game() {
     const [euro, setEuro] = useState(0)
     const [co2, setCO2] = useState(0)
-    const [path] = "/images/president.png"
+    const path = "public/images/president.png"
     const [endOfDialogue, setEndOfDialogue] = useState(false)
 
     return (
