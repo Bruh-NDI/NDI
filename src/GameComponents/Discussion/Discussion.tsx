@@ -1,3 +1,6 @@
+import React, {useState} from "react";
+import {Question} from "./Question.tsx";
+
 export type ArrayOfQuestions = {
     array: QuestionProps[]
 }
@@ -8,24 +11,19 @@ export type QuestionProps = {
     id: string
 }
 
-export function Discussion({array}: ArrayOfQuestions) {
-    const CurrentQuestion = 0
+
+export function Discussion({dialogues, setEndOfDialogue}:{dialogues:any , setEndOfDialogue: React.Dispatch<React.SetStateAction<boolean>>}) {
+    const [CurrentQuestion, setCurrentQuestion] = useState(0)
+
+    const ShowNext = () => {
+        if (CurrentQuestion < dialogues.length - 1) setCurrentQuestion(CurrentQuestion + 1)
+        else setEndOfDialogue(true);
+    }
+
     return (
-        <div className="absolute bottom-0 flex justify-center items-center w-full">
-            {showCurrentQuestion(array, CurrentQuestion)}
+        <div>
+            <Question question={dialogues[CurrentQuestion]} showNext={ShowNext}/>
         </div>
     )
 }
 
-function increaseCurrentQuestion() {
-
-}
-
-function showCurrentQuestion(array: QuestionProps[], index: number) {
-
-    return (
-        <div id={array[index].id} onClick={increaseCurrentQuestion}>
-            <p>{array[index].nomPersonnage} : {array[index].text}</p>
-        </div>
-    )
-}
