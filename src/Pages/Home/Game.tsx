@@ -25,7 +25,7 @@ export default function Game() {
     return (
         <>
             <GameBar euro={euro} co2={co2}/>
-            <div className="h-full w-full">
+            <div className="w-full h-screen flex items-center justify-center">
                 <Sprite id={"background"} path={pathBG} alt={"Un fond d'écran"} height={"full"} width={"full"}/>
             </div>
             <Personnage id={"president"} path={pathPresident} alt={"Un président important"} position={"right"} talking={true}/>
