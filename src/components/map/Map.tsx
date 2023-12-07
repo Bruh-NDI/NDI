@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import './map.css';
 
 export default function Map() {
     const [API_KEY] = useState('huCKCWpchitaDlLgxaaV');
@@ -26,6 +25,7 @@ export default function Map() {
         map.addControl(new maplibregl.FullscreenControl(), 'bottom-right');
         map.addControl(new maplibregl.GeolocateControl(), 'bottom-right');
 
+        // put fetch in cache 1h
         fetch('https://raw.githubusercontent.com/cedricr/eutl/main/export/emissions-FR-geo.geojson')
         .then(response => response.json())
         .then(data => {
@@ -52,10 +52,8 @@ export default function Map() {
                 .setLngLat(e.lngLat)
                 .setHTML(`
                     <h2 class="text-black font-semibold">${properties.installation_name + ' ' + properties.zip_code}</h2>
-                    <h4 class="text-black font-semibold">
-                        <span class="text-red-500 font-semibold">${properties.emissions}</span>
-                        tonnes d’équivalent CO₂
-                    </h4>`)
+                    <span class="text-red-500 font-semibold">${properties.emissions} tonnes d’équivalent CO₂</span>
+                `)
                 .addTo(map);
             });
 
@@ -72,6 +70,9 @@ export default function Map() {
     });
 
     return (
-        <div ref={mapContainer} className="absolute w-full h-full"/>
+        <div ref={mapContainer}
+             // Make the map fit the parent container full
+             className="absolute w-full h-full rounded-xl shadow-xl border-2 border-gray-900"
+        />
     );
 }
