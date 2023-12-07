@@ -19,11 +19,15 @@ export default function Game() {
     const [co2, setCO2] = useState(0)
     const pathPresident = "public/images/president.png"
     const pathMinistre = "public/images/ministre.png"
+    const pathBG = "public/images/bg_intro.jpg"
     const [endOfDialogue, setEndOfDialogue] = useState(false)
 
     return (
         <>
             <GameBar euro={euro} co2={co2}/>
+            <div className="h-full w-full">
+                <Sprite id={"background"} path={pathBG} alt={"Un fond d'écran"} height={"h-full"} width={"w-full"}/>
+            </div>
             <Personnage id={"president"} path={pathPresident} alt={"Un président important"} position={"right"} talking={true}/>
             <Personnage id={"ministre"} path={pathMinistre} alt={"Un ministre important"} position={"left"} talking={false}/>
             <Scene setEuro={setEuro} euro={euro} endOfDialogue={endOfDialogue} setEndOfDialogue={setEndOfDialogue} className="absolute bottom-0 right-0"/>
