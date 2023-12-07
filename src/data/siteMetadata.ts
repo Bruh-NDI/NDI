@@ -1,0 +1,20 @@
+
+export const siteMetadata = {
+  title: 'Nuit de l\'info',
+  author: 'Bruh Edition 2',
+  headerTitle: 'Nuit de l\'info',
+  description: 'Nuit de l\'info',
+  language: 'en-us',
+  theme: 'system',
+  siteUrl: 'https://nuitdelinfo.com',
+  siteRepo: 'https://nuitdelinfo.com',
+  siteLogo: '/static/images/logo.png',
+  socialBanner: '/static/images/twitter-card.png',
+  email: 'address@yoursite.com',
+  github: 'https://github.com',
+  twitter: 'https://twitter.com/Twitter',
+  facebook: 'https://facebook.com',
+  youtube: 'https://youtube.com',
+  linkedin: 'https://www.linkedin.com',
+  locale: 'en-US',
+}
