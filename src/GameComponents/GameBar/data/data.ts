@@ -1,12 +1,3 @@
-export const dialogues: any = [
-    {text: "Bonjour, monsieur le president", nomPersonnage: "Premier Ministre", id: "1"},
-    {text: "Bonjour, monsieur le premier ministre", nomPersonnage: "President", id: "2"},
-    {
-        text: "La demande en énergie de votre ville est croissante. Comment souhaitez-vous répondre à cette demande tout en minimisant l'impact environnemental ?",
-        nomPersonnage: "Premier Ministre",
-        id: "3"
-    },
-]
 
 export const dialogues = {
     '0': [{text: "Bonjour, monsieur le president", nomPersonnage: "Premier Ministre", id: "1"},

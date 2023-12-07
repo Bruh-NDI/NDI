@@ -28,8 +28,6 @@ export default function Game() {
             </div>
             <Personnage id={"president"} path={pathPresident} alt={"Un président important"} position={"right"} talking={true}/>
             <Personnage id={"ministre"} path={pathMinistre} alt={"Un ministre important"} position={"left"} talking={false}/>
-            <Scene setEuro={setEuro} euro={euro} endOfDialogue={endOfDialogue} setEndOfDialogue={setEndOfDialogue} className="absolute bottom-0 right-0"/>
-            <Sprite id={"president"} path={path} alt={"Un monsieur important"}/>
             <Discussion dialogues={dialogues} setEndOfDialogue={setEndOfDialogue}/>
         </>
     )
