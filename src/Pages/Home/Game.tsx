@@ -17,13 +17,15 @@ function Scene({setEuro, euro, endOfDialogue, setEndOfDialogue}: any) {
 export default function Game() {
     const [euro, setEuro] = useState(0)
     const [co2, setCO2] = useState(0)
-    const path = "public/images/president.png"
+    const pathPresident = "public/images/president.png"
+    const pathMinistre = "public/images/ministre.png"
     const [endOfDialogue, setEndOfDialogue] = useState(false)
 
     return (
         <>
             <GameBar euro={euro} co2={co2}/>
-            <Personnage id={"president"} path={path} alt={"Un monsieur important"}/>
+            <Personnage id={"president"} path={pathPresident} alt={"Un président important"}/>
+            <Personnage id={"ministre"} path={pathMinistre} alt={"Un ministre important"}/>
             <Scene setEuro={setEuro} euro={euro} endOfDialogue={endOfDialogue} setEndOfDialogue={setEndOfDialogue} className=""/>
         </>
     )
