@@ -1,13 +1,17 @@
+import {Image} from "@mantine/core";
+
 type SpriteProps = {
     id : string
     path: string
     alt : string
+    height? : number
+    width? : number
 }
 
-export function Sprite ({path, id, alt}: SpriteProps) {
+export function Sprite ({path, id, alt, height, width}: SpriteProps) {
     return (
         <div id={id} className="h-full w-full">
-            <img src={path} alt={alt}/>
+            <img src={path} alt={alt} className={"h-" + height + " w-" + width}/>
         </div>
     )
 }
