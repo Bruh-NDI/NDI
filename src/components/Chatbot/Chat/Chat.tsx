@@ -25,25 +25,31 @@ export function Chat() {
 
     const sendQuestion = () => {
         if (input.length > 0) {
-            isLoading(true)
-            addMessage("Vous", input)
-            const prompt = input
-            setInput("")
-            const headers: { [key: string]: string } = {
-                'Content-Type': 'application/json'
+            if (input === "quoi") {
+                setInput("")
+                addMessage("Vous", "quoi")
+                addMessage("Assistant", "feur")
+            } else {
+                isLoading(true)
+                addMessage("Vous", input)
+                const prompt = input
+                setInput("")
+                const headers: { [key: string]: string } = {
+                    'Content-Type': 'application/json'
+                }
+                if (token.length > 0)
+                    headers["Authorization"] = "Bearer " + token
+                fetch(import.meta.env.VITE_API + "/chatbot", {
+                    method: "POST",
+                    headers,
+                    body: JSON.stringify({message: prompt})
+                }).then(res => res.json()).then(res => {
+                    setToken(res.token)
+                    addMessage("Assistant", res.answer)
+                }).catch(e => console.log(e)).finally(() => {
+                    isLoading(false)
+                })
             }
-            if (token.length > 0)
-                headers["Authorization"] = "Bearer " + token
-            fetch(import.meta.env.VITE_API + "/chatbot", {
-                method: "POST",
-                headers,
-                body: JSON.stringify({message: prompt})
-            }).then(res => res.json()).then(res => {
-                setToken(res.token)
-                addMessage("Assistant", res.answer)
-            }).catch(e => console.log(e)).finally(() => {
-                isLoading(false)
-            })
         }
     }
 

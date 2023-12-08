@@ -1,4 +1,4 @@
-import {Box, Burger, Button, Divider, Drawer, Group, rem, ScrollArea,} from '@mantine/core';
+import {Box, Burger, Divider, Drawer, Group, rem, ScrollArea,} from '@mantine/core';
 import {useDisclosure} from '@mantine/hooks';
 import classes from '../../style/HeaderMegaMenu.module.scss';
 import Logo from "../icons/Logo.tsx";
@@ -12,9 +12,9 @@ export function HeaderMegaMenu() {
         <Box pb={0}>
             <header className={classes.header}>
                 <Group justify="space-between" h="100%">
-                    <a href="/">
+                    <Link to="/">
                         <Logo/>
-                    </a>
+                    </Link>
                     <Group h="100%" gap={0} visibleFrom="sm">
                         <Link to="/" className={classes.link}>
                             Home
@@ -44,15 +44,15 @@ export function HeaderMegaMenu() {
                 <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
                     <Divider my="sm"/>
 
-                    <a href="/" className={classes.link}>
+                    <Link to="/" className={classes.link}>
                         Home
-                    </a>
-                    <a href="/game" className={classes.link}>
+                    </Link>
+                    <Link to="/game" className={classes.link}>
                         Game
-                    </a>
-                    <a href="/test" className={classes.link}>
-                        Test
-                    </a>
+                    </Link>
+                    <Link to="/about" className={classes.link}>
+                        A propos
+                    </Link>
                 </ScrollArea>
             </Drawer>
         </Box>
