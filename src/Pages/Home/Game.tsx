@@ -35,11 +35,40 @@ export default function Game() {
         return dialogues[actualDialogue][actualDiscussion].nomPersonnage === "Premier Ministre"
     };
 
+    const BackgroundIMG = () => {
+        let moyenne = (euro + co2 + social) / 3;
+        let imagePath = "public/images/villes/";
+
+        if (moyenne < -10) {
+            imagePath += "-10.jpg";
+        } else if (moyenne < -2) {
+            imagePath += "-2.jpg";
+        } else if (moyenne < 0) {
+            imagePath += "0.jpg";
+        } else if (moyenne < 10) {
+            imagePath += "10.jpg";
+        } else if (moyenne < 15) {
+            imagePath += "15.jpg";
+        } else if (moyenne < 20) {
+            imagePath += "20.jpg";
+        } else if (moyenne < 25) {
+            imagePath += "25.jpg";
+        } else if (moyenne < 28) {
+            imagePath += "28.jpg";
+        } else if (moyenne < 30) {
+            imagePath += "30.jpg";
+        } else {
+            imagePath += "35.jpg";
+        }
+        return imagePath;
+    }
+
+
     return (
         <>
             <GameBar euro={euro} co2={co2}/>
             <div className="w-full h-screen flex items-center justify-center">
-                <Sprite id={"background"} path={pathBG} alt={"Un fond d'écran"} height={"full"} width={"full"}/>
+                <Sprite id={"background"} path={BackgroundIMG()} alt={"Un fond d'écran"} height={"full"} width={"full"}/>
             </div>
             <Personnage id={"president"} path={pathPresident} alt={"Un président important"} position={"right"} talking={setTalkingPresident()}/>
             <Personnage id={"ministre"} path={pathMinistre} alt={"Un ministre important"} position={"left"} talking={setTalkingMinistre()}/>

@@ -39,139 +39,140 @@ export const boutonsReponses = {
         {
             text: "Investir massivement dans les énergies renouvelables.",
             id: "reponse1",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: 8,
+            getSocial: 3,
+            getEconomie: -5
         },
         {
             text: "Continuer à dépendre des combustibles fossiles pour maintenir la stabilité économique.",
             id: "reponse2",
-            getEcolo: 0,
+            getEcolo: -6,
             getSocial: 0,
-            getEconomie: 0
+            getEconomie: 7
         },
         {
             text: " Encourager la conservation d'énergie sans investir dans de nouvelles sources.",
             id: "reponse3",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: -2,
+            getSocial: 1,
+            getEconomie: 1
         }
     ],
     '2': [
         {
             text: "Mettre en place des zones de protection pour la faune et la flore",
             id: "reponse1",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: 9,
+            getSocial: 2,
+            getEconomie: -3
         },
         {
             text: "Autoriser la construction sur des zones naturelles pour stimuler l'économie locale.",
             id: "reponse2",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: -8,
+            getSocial: -3,
+            getEconomie: 10
         },
         {
             text: " Ignorer les préoccupations environnementales pour accélérer le développement urbain.",
             id: "reponse3",
-            getEcolo: 0,
+            getEcolo: -10,
             getSocial: 0,
-            getEconomie: 0
+            getEconomie: 15
         }
     ],
     '3': [
         {
             text: "Mettre en œuvre des politiques strictes de recyclage et de réduction des déchets.",
             id: "reponse1",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: 7,
+            getSocial: 3,
+            getEconomie: -4
         },
         {
             text: "Ignorer le problème des plastiques à usage unique pour favoriser l'industrie locale.",
             id: "reponse2",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: -5,
+            getSocial: -2,
+            getEconomie: 6
         },
         {
             text: "Encourager la production de plastiques biodégradables sans politiques strictes.",
             id: "reponse3",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: 3,
+            getSocial: 1,
+            getEconomie: -2
         }
     ],
     '4': [
         {
             text: "Encourager la conservation de l'eau et investir dans des sources alternatives. ",
             id: "reponse1",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: 8,
+            getSocial: 2,
+            getEconomie: -6
         },
         {
             text: "Exploiter davantage les ressources en eau actuelles pour répondre à la demande.\n",
             id: "reponse2",
-            getEcolo: 0,
+            getEcolo: -4,
             getSocial: 0,
-            getEconomie: 0
+            getEconomie: 5
         },
         {
             text: "Ignorer les problèmes liés à la consommation d'eau pour favoriser l'industrie.",
             id: "reponse3",
-            getEcolo: 0,
+            getEcolo: -7,
             getSocial: 0,
-            getEconomie: 0
+            getEconomie: 9
         }
     ],
     '5': [
         {
             text: "Développer un réseau de transports publics efficace.",
             id: "reponse1",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: 6,
+            getSocial: 4,
+            getEconomie: -3
         },
         {
             text: "Continuer à favoriser les voitures individuelles pour soutenir l'industrie automobile.",
             id: "reponse2",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: -5,
+            getSocial: 3,
+            getEconomie: 8
         },
         {
             text: "Ignorer les problèmes liés à la circulation pour se concentrer sur d'autres priorités.",
             id: "reponse3",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: -8,
+            getSocial: -4,
+            getEconomie: 10
         }
     ],
     '6': [
         {
             text: "Mettre en place des normes strictes d'émissions pour les industries.",
             id: "reponse1",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: 9,
+            getSocial: 3,
+            getEconomie: -5
         },
         {
             text: "Ignorer les problèmes environnementaux pour maintenir la compétitivité économique.",
             id: "reponse2",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: -10,
+            getSocial: -5,
+            getEconomie: 12
         },
         {
             text: "Encourager les industries à adopter des pratiques plus durables sans réglementation stricte.",
             id: "reponse3",
-            getEcolo: 0,
-            getSocial: 0,
-            getEconomie: 0
+            getEcolo: 2,
+            getSocial: 1,
+            getEconomie: 3
         }
     ],
 
 }
+
