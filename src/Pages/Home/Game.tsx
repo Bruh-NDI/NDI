@@ -24,19 +24,22 @@ export default function Game() {
         }
     }, [endOfDialogue])
 
+    const setTalkingPresident = () => {
+        return dialogues[actualDialogue][actualDiscussion].nomPersonnage === "President"
+    };
 
-    // console.log(endOfDialogue)
-    console.log(dialogues[actualDialogue])
-    console.log(actualDialogue)
-    console.log(dialogues[actualDialogue][0])
+    const setTalkingMinistre = () => {
+        return dialogues[actualDialogue][actualDiscussion].nomPersonnage === "Premier Ministre"
+    };
+
     return (
         <>
             <GameBar euro={euro} co2={co2}/>
             <div className="w-full h-screen flex items-center justify-center">
                 <Sprite id={"background"} path={pathBG} alt={"Un fond d'écran"} height={"full"} width={"full"}/>
             </div>
-            <Personnage id={"president"} path={pathPresident} alt={"Un président important"} position={"right"} talking={true}/>
-            <Personnage id={"ministre"} path={pathMinistre} alt={"Un ministre important"} position={"left"} talking={false}/>
+            <Personnage id={"president"} path={pathPresident} alt={"Un président important"} position={"right"} talking={setTalkingPresident()}/>
+            <Personnage id={"ministre"} path={pathMinistre} alt={"Un ministre important"} position={"left"} talking={setTalkingMinistre()}/>
             <Discussion dialogues={dialogues[actualDialogue]} setEndOfDialogue={setEndOfDialogue} actualDiscussion={actualDiscussion} setActualDiscussion={setActualDiscussion}/>
         </>
     )
