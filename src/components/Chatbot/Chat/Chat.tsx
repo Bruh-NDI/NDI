@@ -83,6 +83,9 @@ export function Chat() {
         </Card>
         <Button className={"!fixed bottom-[20px] right-[20px]"} style={{
             display: !showed ? "block" : "none",
-        }} onClick={() => setShowed(true)}>Chatbot</Button>
+        }} onClick={() => setShowed(true)}>
+            <IconSend size={18} className={'mr-1'}/>
+            Chatbot
+        </Button>
     </>
 }

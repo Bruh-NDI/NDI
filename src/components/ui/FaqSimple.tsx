@@ -13,9 +13,9 @@ const placeholder =[
 ]
 export function FaqSimple() {
     return (
-        <div className={'w-full'}>
+        <div className={'w-full max-md:px-4'}>
             <div className={'max-w-6xl mx-auto'}>
-                <Title ta="center" className={classes.title}>
+                <Title ta="center" pb={20} className={classes.title}>
                    Les solutions efficaces
                 </Title>
 
