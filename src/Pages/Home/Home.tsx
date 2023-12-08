@@ -12,7 +12,6 @@ function Home() {
                 <FeaturesCards/>
                 <FaqSimple/>
             </div>
-            <p>Home</p>
             <Chat/>
         </>
     )
