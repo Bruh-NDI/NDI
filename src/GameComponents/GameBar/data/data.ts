@@ -52,20 +52,20 @@ export const boutonsReponses : any = {
             date: 5,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: 8,
             getSocial: 3,
-            getEconomie: -5,
+            getEconomie: -7,
         },
         {
             text: "Continuer à dépendre des combustibles fossiles pour maintenir la stabilité économique.",
             id: "reponse2",
-            date: 2,  // Exemple de valeur, ajustez selon vos besoins
+            date: 1,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -6,
-            getSocial: 0,
-            getEconomie: 7
+            getSocial: -1,
+            getEconomie: 6
         },
         {
             text: "Encourager la conservation d'énergie sans investir dans de nouvelles sources.",
             id: "reponse3",
-            date: 1,  // Exemple de valeur, ajustez selon vos besoins
+            date: 2,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -2,
             getSocial: 1,
             getEconomie: 1
@@ -78,7 +78,7 @@ export const boutonsReponses : any = {
             date: 7,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: 9,
             getSocial: 2,
-            getEconomie: -3
+            getEconomie: -10
         },
         {
             text: "Autoriser la construction sur des zones naturelles pour stimuler l'économie locale.",
@@ -86,7 +86,7 @@ export const boutonsReponses : any = {
             date: 4,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -8,
             getSocial: -3,
-            getEconomie: 10
+            getEconomie: 15
         },
         {
             text: "Ignorer les préoccupations environnementales pour accélérer le développement urbain.",
@@ -94,7 +94,7 @@ export const boutonsReponses : any = {
             date: 6,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -10,
             getSocial: 0,
-            getEconomie: 15
+            getEconomie: 10
         }
     ],
     '3': [
@@ -130,7 +130,7 @@ export const boutonsReponses : any = {
             date: 6,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: 8,
             getSocial: 2,
-            getEconomie: -6
+            getEconomie: -8
         },
         {
             text: "Exploiter davantage les ressources en eau actuelles pour répondre à la demande.\n",
@@ -144,8 +144,8 @@ export const boutonsReponses : any = {
             text: "Ignorer les problèmes liés à la consommation d'eau pour favoriser l'industrie.",
             id: "reponse3",
             date: 5,  // Exemple de valeur, ajustez selon vos besoins
-            getEcolo: -7,
-            getSocial: 0,
+            getEcolo: -10,
+            getSocial: 2,
             getEconomie: 9
         }
     ],
@@ -156,7 +156,7 @@ export const boutonsReponses : any = {
             date: 4,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: 6,
             getSocial: 4,
-            getEconomie: -3
+            getEconomie: -7
         },
         {
             text: "Continuer à favoriser les voitures individuelles pour soutenir l'industrie automobile.",
