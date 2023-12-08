@@ -1,5 +1,6 @@
+import {Divider, Text} from "@mantine/core"
 import {Compteur} from "../Compteur/Compteur.tsx";
-import {Date} from "../Date/Date.tsx";
+import React from "react";
 
 type InfoNavabar = {
     euro: number
@@ -10,13 +11,14 @@ type InfoNavabar = {
 
 export function GameBar({euro, co2, social, date}: InfoNavabar) {
     return (
-        <div className="w-full h-full">
-            <div className="container mx-auto flex justify-between items-center p-2">
-                <Date Value={date} id="date"/>
-                <Compteur Value={social} Type="Million d'habitant" id="social"/>
-                <Compteur Value={euro} Type="%€" id="euro"/>
-                <Compteur Value={co2} Type="ppm" id="CO2"/>
+        <div className="w-full h-full flex items-center justify-center flex-col pb-4">
+            <div className="container mx-auto flex justify-between items-center py-2 mb-2">
+                <Compteur Value={social + " million"} title={"Habitants"}/>
+                <Compteur Value={euro + "€"} title={"PIB"}/>
+                <Compteur Value={co2 + " PPM"} title={"Polution"}/>
             </div>
+            <Divider className={"w-full py-2"}/>
+            <Text fw={700}>Année {date}</Text>
         </div>
     )
 }
