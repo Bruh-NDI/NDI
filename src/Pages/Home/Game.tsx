@@ -8,9 +8,9 @@ import BoutonReponse from "../../GameComponents/BoutonReponse/BoutonReponse.tsx"
 import PopUp from "../../GameComponents/PopUp/PopUp.tsx";
 
 export default function Game() {
-    const [euro, setEuro] = useState(1)
-    const [co2, setCO2] = useState(1)
-    const [social, setSocial] = useState(1)
+    const [euro, setEuro] = useState(2)
+    const [co2, setCO2] = useState(2)
+    const [social, setSocial] = useState(0)
     const [date, setDate] = useState(2023)
     const pathPresident = "public/images/president.png"
     const pathMinistre = "public/images/ministre-bg.png"
@@ -43,23 +43,23 @@ export default function Game() {
     const BackgroundIMG = () => {
         let moyenne = (euro + co2 + social) / 3;
         let imagePath = "public/images/villes/";
-        if (moyenne < 0.9) {
+        if (moyenne < 1.2) {
             imagePath += "-10.jpg";
-        } else if (moyenne < 1.3) {
+        } else if (moyenne < 2.4) {
             imagePath += "-2.jpg";
-        } else if (moyenne < 2.6) {
+        } else if (moyenne < 3.6) {
             imagePath += "0.jpg";
-        } else if (moyenne < 4) {
+        } else if (moyenne < 4.8) {
             imagePath += "10.jpg";
-        } else if (moyenne <6) {
+        } else if (moyenne < 6) {
             imagePath += "15.jpg";
-        } else if (moyenne < 8) {
+        } else if (moyenne < 7.2) {
             imagePath += "20.jpg";
-        } else if (moyenne < 10) {
+        } else if (moyenne < 8.4) {
             imagePath += "25.jpg";
-        } else if (moyenne < 11) {
+        } else if (moyenne < 9.6) {
             imagePath += "28.jpg";
-        } else if (moyenne < 12) {
+        } else if (moyenne < 10.8) {
             imagePath += "30.jpg";
         } else {
             imagePath += "35.jpg";
@@ -71,7 +71,7 @@ export default function Game() {
         let moyenne = (euro + co2 + social) / 3;
         console.log(moyenne);
         let text = "";
-        if (moyenne < 6) {
+        if (moyenne < 4) {
             text = "Votre ville est une catastrophe écologique, économique et sociale. Vous avez perdu !";
         } else if (moyenne < 10) {
             text = "Votre ville est dans un état moyen. Vous auriez pu faire mieux !";
