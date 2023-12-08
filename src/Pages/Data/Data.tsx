@@ -1,7 +1,41 @@
 import Map from "../../components/map/Map.tsx";
+import {Pie} from "../../components/graphs/pie.tsx";
+
+const data = [
+    {
+        id: "java",
+        label: "java",
+        value: 195,
+        color: "hsl(90, 70%, 50%)"
+    },
+    {
+        id: "erlang",
+        label: "erlang",
+        value: 419,
+        color: "hsl(56, 70%, 50%)"
+    },
+    {
+        id: "ruby",
+        label: "ruby",
+        value: 407,
+        color: "hsl(103, 70%, 50%)"
+    },
+    {
+        id: "haskell",
+        label: "haskell",
+        value: 474,
+        color: "hsl(186, 70%, 50%)"
+    },
+    {
+        id: "go",
+        label: "go",
+        value: 71,
+        color: "hsl(104, 70%, 50%)"
+    }
+];
 
 export function Data() {
-    return(
+    return (
         <>
             <div className="flex flex-col space-y-12 justify-center items-center p-8 w-full">
                 <div className="flex flex-col space-y-12 justify-center items-start p-8 w-1/2">
@@ -40,6 +74,9 @@ export function Data() {
                         Les données sont disponibles pour les années 2013 à 2019, et sont présentées par pays, par
                         secteur et par installation.
                     </p>
+                </div>
+                <div style={{height: 500, width: "100%"}}>
+                    <Pie data={data}/>
                 </div>
             </div>
         </>
