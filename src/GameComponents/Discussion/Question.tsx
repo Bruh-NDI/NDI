@@ -44,7 +44,7 @@ export function Question({
 
     return (
         <div id={question.id} onClick={showNext}
-             className="w-[60%] bg-white h-full cursor-pointer rounded-se-2xl border-2 border-black rounded-md p-4">
+             className="w-[60%] bg-white/50 backdrop-blur h-full drop-shadow cursor-pointer rounded-se-2xl border-2 border-black rounded-md p-4">
             <p className="z-50 font-bold text-black break-normal">{displayText}</p>
         </div>
     );
