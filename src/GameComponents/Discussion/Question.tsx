@@ -5,8 +5,8 @@ export function Question({question, showNext}:{question: QuestionProps, showNext
 () => void
 }): any {
     return (
-        <div id={question.id} className="absolute bottom-10" onClick={showNext} >
-            <p className="z-50 font-bold text-black">{question.nomPersonnage} : {question.text}</p>
+        <div id={question.id} onClick={showNext} className="w-[40%] bg-white h-full">
+            <p className="z-50 font-bold text-black ">{question.nomPersonnage} : {question.text}</p>
         </div>
     )
 }

@@ -21,7 +21,7 @@ export function Discussion({dialogues, setEndOfDialogue}:{dialogues:any , setEnd
     }
 
     return (
-        <div>
+        <div className="container mx-auto flex justify-between items-center absolute bottom-10 h-[100px] w-full">
             <Question question={dialogues[CurrentQuestion]} showNext={ShowNext}/>
         </div>
     )
