@@ -34,7 +34,7 @@ export function Discussion({
     console.log(actualDiscussion);
     console.log(dialoguesArray[actualDiscussion]);
     return (
-        <div className=" parent-container flex items-center justify-center container mx-auto absolute bottom-10 h-[100px] w-full">
+        <div className=" parent-container flex items-center justify-center mx-auto absolute bottom-10 h-[100px] w-full">
             <Question question={dialoguesArray[actualDiscussion]} showNext={showNext}/>
         </div>
     );

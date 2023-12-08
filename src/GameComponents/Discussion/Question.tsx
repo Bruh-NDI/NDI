@@ -15,10 +15,8 @@ export function Question({
     }
 
     return (
-        <div id={question.id} className="absolute bottom-10" onClick={showNext}>
-            <p className="z-50 font-bold text-black">
-                {question.nomPersonnage} : {question.text}
-            </p>
+        <div id={question.id} onClick={showNext} className="w-[60%] bg-white h-full cursor-pointer rounded-se-2xl border-2 border-black rounded-md p-[3px]">
+            <p className="z-50 font-bold text-black break-normal">{question.nomPersonnage} : {question.text}</p>
         </div>
     );
 }
