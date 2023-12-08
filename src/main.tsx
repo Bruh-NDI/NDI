@@ -7,6 +7,7 @@ import {MantineProvider} from "@mantine/core";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Layout from "./Pages/Layout/Layout.tsx";
 import {About} from "./Pages/About/About.tsx";
+import Game from "./Pages/Home/Game.tsx";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <MantineProvider defaultColorScheme={"dark"}
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             <Routes>
                 <Route path="/" element={<Layout/>}>
                     <Route path={"/"} element={<Home/>}/>
+                    <Route path={"/game"} element={<Game/>}/>
                     <Route path={"/about"} element={<About/>}/>
                 </Route>
             </Routes>

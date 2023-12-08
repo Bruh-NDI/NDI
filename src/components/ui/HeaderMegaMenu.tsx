@@ -1,6 +1,6 @@
 import {Box, Burger, Button, Divider, Drawer, Group, rem, ScrollArea,} from '@mantine/core';
 import {useDisclosure} from '@mantine/hooks';
-import classes from '../../style/HeaderMegaMenu.module.css';
+import classes from '../../style/HeaderMegaMenu.module.scss';
 import Logo from "../icons/Logo.tsx";
 import {Link} from "react-router-dom";
 

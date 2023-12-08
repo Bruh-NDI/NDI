@@ -17,7 +17,7 @@ import {
     IconTemperaturePlus,
     IconLoadBalancer
 } from '@tabler/icons-react';
-import classes from '../../style/FeaturesCards.module.css';
+import classes from '../../style/FeaturesCards.module.scss';
 
 const mockdata = [
     {

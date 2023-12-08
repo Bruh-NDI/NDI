@@ -1,5 +1,5 @@
 import {Container, Title, Text, Button} from '@mantine/core';
-import classes from '../../style/HeroImageRight.module.css';
+import classes from '../../style/HeroImageRight.module.scss';
 import {IconLoadBalancer, IconTemperatureCelsius, IconTemperaturePlus} from "@tabler/icons-react";
 
 export function HeroImageRight() {

@@ -8,9 +8,9 @@ import {dialogues} from "../../GameComponents/GameBar/data/data.ts";
 export default function Game() {
     const [euro, setEuro] = useState(0)
     const [co2, setCO2] = useState(0)
-    const pathPresident = "public/images/president.png"
-    const pathMinistre = "public/images/ministre.png"
-    const pathBG = "public/images/bg_intro.jpg"
+    const pathPresident = "images/president.png"
+    const pathMinistre = "images/ministre.png"
+    const pathBG = "images/bg_intro.jpg"
     const [path] = "/images/president.png"
     const [endOfDialogue, setEndOfDialogue] = useState<boolean>(false)
     const [actualDialogue, setActualDialogue] = useState<number>(0)
