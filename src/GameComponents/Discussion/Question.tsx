@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { QuestionProps } from "./Discussion.tsx";
+import React, {useEffect, useState} from 'react';
+import {QuestionProps} from "./Discussion.tsx";
 
 const useTypewriter = (text, speed = 50) => {
     const [displayText, setDisplayText] = useState('');
@@ -43,7 +43,8 @@ export function Question({
     const displayText = useTypewriter(text, 17);
 
     return (
-        <div id={question.id} onClick={showNext} className="w-[60%] bg-white h-full cursor-pointer rounded-se-2xl border-2 border-black rounded-md p-[3px]">
+        <div id={question.id} onClick={showNext}
+             className="w-[60%] bg-white h-full cursor-pointer rounded-se-2xl border-2 border-black rounded-md p-4">
             <p className="z-50 font-bold text-black break-normal">{displayText}</p>
         </div>
     );
