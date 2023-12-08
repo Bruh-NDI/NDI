@@ -39,24 +39,24 @@ export default function Game() {
     const BackgroundIMG = () => {
         let moyenne = (euro + co2 + social) / 3;
         let imagePath = "public/images/villes/";
-
-        if (moyenne < -10) {
+        console.log(moyenne, euro, co2, social);
+        if (moyenne < -1) {
             imagePath += "-10.jpg";
-        } else if (moyenne < -2) {
-            imagePath += "-2.jpg";
         } else if (moyenne < 0) {
+            imagePath += "-2.jpg";
+        } else if (moyenne < 1) {
             imagePath += "0.jpg";
-        } else if (moyenne < 10) {
+        } else if (moyenne < 2) {
             imagePath += "10.jpg";
-        } else if (moyenne < 15) {
+        } else if (moyenne < 3) {
             imagePath += "15.jpg";
-        } else if (moyenne < 20) {
+        } else if (moyenne < 4) {
             imagePath += "20.jpg";
-        } else if (moyenne < 25) {
+        } else if (moyenne < 5) {
             imagePath += "25.jpg";
-        } else if (moyenne < 28) {
+        } else if (moyenne < 6) {
             imagePath += "28.jpg";
-        } else if (moyenne < 30) {
+        } else if (moyenne < 7) {
             imagePath += "30.jpg";
         } else {
             imagePath += "35.jpg";
