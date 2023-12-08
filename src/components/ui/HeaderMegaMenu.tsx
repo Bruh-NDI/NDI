@@ -1,7 +1,6 @@
-import {Box, Burger, Divider, Drawer, Group, rem, ScrollArea,} from '@mantine/core';
+import {Box, Burger, Divider, Drawer, Group, Image, rem, ScrollArea,} from '@mantine/core';
 import {useDisclosure} from '@mantine/hooks';
 import classes from '../../style/HeaderMegaMenu.module.scss';
-import Logo from "../icons/Logo.tsx";
 import {Link} from "react-router-dom";
 
 
@@ -13,7 +12,7 @@ export function HeaderMegaMenu() {
             <header className={classes.header}>
                 <Group justify="space-between" h="100%">
                     <Link to="/">
-                        <Logo/>
+                        <Image h={32} src={"images/logo.png"}/>
                     </Link>
                     <Group h="100%" gap={0} visibleFrom="sm">
                         <Link to="/" className={classes.link}>
