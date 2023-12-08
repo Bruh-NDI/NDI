@@ -32,7 +32,7 @@ export function HeroImageRight() {
                             variant="gradient"
                             gradient={{from: 'cyan', to: 'green'}}
                             size="xl"
-                            className={classes.control}
+                            className={classes.control + ' drop-shadow-lg '}
                             mt={40}
                         >
                             Jouer au jeu
