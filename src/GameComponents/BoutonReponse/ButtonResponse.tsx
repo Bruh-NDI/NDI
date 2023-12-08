@@ -25,7 +25,7 @@ export function ButtonResponse({ setResponse, setEndOfDiscussion, setEcologie, s
     };
 
     return (
-        <button id={button.id} onClick={updateValue}>{button.text}</button>
+        <button id={button.id} onClick={updateValue} className="transition-all bg-amber-50 text-black m-1 rounded-md p-1 border-amber-600 border-2">{button.text}</button>
     );
 
 }

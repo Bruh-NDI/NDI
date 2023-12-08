@@ -29,7 +29,7 @@ export function Discussion({
     const dialoguesArray = Object.keys(dialogues).map((key) => dialogues[key]);
 
     return (
-        <div className=" parent-container flex items-center justify-center mx-auto absolute bottom-10 h-[100px] w-full">
+        <div className=" parent-container flex items-center justify-center mx-auto absolute bottom-1 h-[100px] w-full">
             <Question question={dialoguesArray[actualDiscussion]} showNext={showNext}/>
         </div>
     );

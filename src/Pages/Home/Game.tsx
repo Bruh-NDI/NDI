@@ -67,7 +67,7 @@ export default function Game() {
 
     return (
         <>
-            <GameBar euro={euro} co2={co2}/>
+            <GameBar euro={euro} co2={co2} date={2023}/>
             <div className="w-full h-screen flex items-center justify-center">
                 <Sprite id={"background"} path={BackgroundIMG()} alt={"Un fond d'écran"} height={"full"} width={"full"}/>
             </div>
