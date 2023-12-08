@@ -18,6 +18,7 @@ export default function Game() {
     const [actualDialogue, setActualDialogue] = useState<number>(0)
     const [actualDiscussion, setActualDiscussion] = useState<number>(0)
     const [response, setResponse] = useState<boolean>(false)
+    const reponseUser = [];
 
     useEffect(() => {
         if (endOfDialogue && actualDialogue < 5 && response) {
@@ -73,7 +74,7 @@ export default function Game() {
             <Personnage id={"president"} path={pathPresident} alt={"Un président important"} position={"right"} talking={setTalkingPresident()}/>
             <Personnage id={"ministre"} path={pathMinistre} alt={"Un ministre important"} position={"left"} talking={setTalkingMinistre()}/>
             <Discussion dialogues={dialogues[actualDialogue]} actualDiscussion={actualDiscussion} setActualDiscussion={setActualDiscussion}/>
-            {actualDiscussion === dialogues[actualDialogue].length - 1 && <BoutonReponse setSocial={setSocial} setEcolo={setCO2} setEconomie={setEuro} getEcolo={co2} getEconomie={euro} getSocial={social} id={actualDialogue} setResponse={setResponse} setEndOfDiscussion={setEndOfDialogue}/>}
+            {actualDiscussion === dialogues[actualDialogue].length - 1 && <BoutonReponse setSocial={setSocial} setEcolo={setCO2} setEconomie={setEuro} id={actualDialogue} setResponse={setResponse} setEndOfDiscussion={setEndOfDialogue}/>}
         </>
     )
 }
