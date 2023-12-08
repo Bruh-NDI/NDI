@@ -1,13 +1,15 @@
+import {Text} from "@mantine/core"
+
 type CompteurProps = {
-    Value: number
-    Type: string
-    id: string
+    Value: string
+    title: string
 }
 
-export function Compteur({Value, Type, id}: CompteurProps) {
+export function Compteur({Value, title}: CompteurProps) {
     return (
-        <div id={id}>
-            <p>{Value} : {Type}</p>
+        <div className={"flex flex-col justify-center items-center"}>
+            <Text c={"dimmed"} fw={500} size={"md"}>{title}</Text>
+            <Text fw={600}>{Value}</Text>
         </div>
     )
 }

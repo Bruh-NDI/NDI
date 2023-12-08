@@ -1,5 +1,30 @@
-import React from "react";
-import { QuestionProps } from "./Discussion.tsx";
+import React, {useEffect, useState} from 'react';
+import {QuestionProps} from "./Discussion.tsx";
+
+const useTypewriter = (text, speed = 50) => {
+    const [displayText, setDisplayText] = useState('');
+
+    useEffect(() => {
+        setDisplayText('' + text.charAt(0)); // Réinitialiser displayText lorsque text change
+
+        let i = 0; // Commencer à l'index 0 pour afficher la première lettre
+        const typingInterval = setInterval(() => {
+            if (i < text.length) {
+                setDisplayText(prevText => prevText + text.charAt(i));
+                i++;
+            } else {
+                clearInterval(typingInterval);
+            }
+        }, speed);
+
+        return () => {
+            clearInterval(typingInterval);
+        };
+    }, [text, speed]);
+
+    return displayText;
+};
+
 
 export function Question({
                              question,
@@ -14,11 +39,13 @@ export function Question({
         return null; // ou un rendu par défaut
     }
 
+    const text = question.nomPersonnage + " : " + question.text
+    const displayText = useTypewriter(text, 17);
+
     return (
-        <div id={question.id} className="absolute bottom-10" onClick={showNext}>
-            <p className="z-50 font-bold text-black">
-                {question.nomPersonnage} : {question.text}
-            </p>
+        <div id={question.id} onClick={showNext}
+             className="w-[60%] bg-white h-full cursor-pointer rounded-se-2xl border-2 border-black rounded-md p-4">
+            <p className="z-50 font-bold text-black break-normal">{displayText}</p>
         </div>
     );
 }
