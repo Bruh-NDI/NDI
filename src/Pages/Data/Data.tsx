@@ -207,8 +207,7 @@ export function Data() {
                             installations soumises à quota de l'UE. Chaque année, les exploitants de ces installations
                             rapportent ces émissions, qui sont ensuite vérifiées par les autorités nationales et
                             l'Agence européenne pour l'environnement. La Commission européenne publie ensuite ces
-                            données, qui sont disponibles pour les années 2013 à 2019. Elles sont présentées par pays,
-                            par secteur et par installation.
+                            données. Elles sont présentées par pays, par secteur et par installation.
                         </p>
                         <p className="text-xl text-justify">
                             Nous avons utilisé ces données pour créer une visualisation sur une carte, où les émissions
