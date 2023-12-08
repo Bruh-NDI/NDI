@@ -22,6 +22,7 @@ export function Bar({data, title}) {
             colors={{scheme: 'nivo'}}
             theme={{
                 axis: {
+                    // @ts-ignore
                     fontSize: "14px",
                     tickColor: "#eee",
                     ticks: {

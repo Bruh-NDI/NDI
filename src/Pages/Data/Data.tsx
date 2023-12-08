@@ -163,6 +163,7 @@ export function Data() {
 
         const formattedResult = Object.entries(result).map(([year, values]) => ({
             year,
+            // @ts-ignore
             ...values,
         }));
 
