@@ -21,6 +21,9 @@ export function HeaderMegaMenu() {
                         <Link to="/game" className={classes.link}>
                             Game
                         </Link>
+                        <Link to="/data" className={classes.link}>
+                            Données
+                        </Link>
                         <Link to="/about" className={classes.link}>
                             A propos
                         </Link>
