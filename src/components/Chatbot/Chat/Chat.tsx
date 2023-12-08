@@ -56,7 +56,7 @@ export function Chat() {
     }
 
     return <>
-        <Card withBorder className={"w-[300px] !fixed flex-col gap-2  bottom-[20px] right-[20px]"} style={{
+        <Card withBorder className={"w-[300px] !fixed flex-col gap-2  bottom-[20px] right-[20px] drop-shadow-lg"} style={{
             display: showed ? "flex" : "none",
         }}>
             <div className={"flex justify-between w-full"}>
@@ -75,7 +75,7 @@ export function Chat() {
                 <Button onClick={sendQuestion} loading={loading}><IconSend size={18}/></Button>
             </div>
         </Card>
-        <Button className={"!fixed bottom-[20px] right-[20px]"} style={{
+        <Button className={"!fixed bottom-[20px] right-[20px] drop-shadow-lg"} style={{
             display: !showed ? "block" : "none",
         }} onClick={() => setShowed(true)}>
             <IconSend size={18} className={'mr-1'}/>
