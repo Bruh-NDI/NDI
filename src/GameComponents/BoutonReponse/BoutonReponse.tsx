@@ -10,18 +10,19 @@ type BoutonReponseProps = {
     id: number;
     setResponse: React.Dispatch<React.SetStateAction<boolean>>;
     setEndOfDiscussion: React.Dispatch<React.SetStateAction<boolean>>;
+    reponseUser: React.Dispatch<React.SetStateAction<string[]>>;
+    setDate: React.Dispatch<React.SetStateAction<number>>;
 }
 
 
 
-function BoutonReponse({setEcolo, setSocial, setEconomie, id , setResponse, setEndOfDiscussion}: BoutonReponseProps) {
+function BoutonReponse({setEcolo, setSocial, setEconomie, id , setResponse, setEndOfDiscussion, reponseUser, setDate}: BoutonReponseProps) {
 
     const possibleResponses = boutonsReponses[id+1];
 
     return (
         <div className="flex flex-col items-center justify-center absolute bottom-[110px] w-full zgeg">
             {possibleResponses.map((response, index) => (
-                console.log(response),
                 <ButtonResponse
                     key={index}
                     setResponse={setResponse}
@@ -29,6 +30,8 @@ function BoutonReponse({setEcolo, setSocial, setEconomie, id , setResponse, setE
                     setEcologie={setEcolo}
                     setSocial={setSocial}
                     setEconomie={setEconomie}
+                    reponseUser={reponseUser}
+                    setDate={setDate}
                     button={response}
                 ></ButtonResponse>
             ))}

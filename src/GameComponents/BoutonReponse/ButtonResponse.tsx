@@ -1,25 +1,32 @@
+import React from "react";
+
 type ButtonResponseProps = {
     setResponse: React.Dispatch<React.SetStateAction<boolean>>;
     setEndOfDiscussion: React.Dispatch<React.SetStateAction<boolean>>;
     setEcologie: React.Dispatch<React.SetStateAction<number>>;
     setSocial: React.Dispatch<React.SetStateAction<number>>;
     setEconomie: React.Dispatch<React.SetStateAction<number>>;
-    button: ButtonProps
+    button: ButtonProps;
+    reponseUser: React.Dispatch<React.SetStateAction<string[]>>;
+    setDate: React.Dispatch<React.SetStateAction<number>>;
 };
 
 export type ButtonProps = {
     text: string;
     id: string;
+    date: number;
     getEcolo: number;
     getSocial: number;
     getEconomie: number;
 };
 
-export function ButtonResponse({ setResponse, setEndOfDiscussion, setEcologie, setSocial, setEconomie, button } : ButtonResponseProps) {
+export function ButtonResponse({ setResponse, setEndOfDiscussion, setEcologie, setSocial, setEconomie, button, reponseUser, setDate } : ButtonResponseProps) {
     const updateValue = () => {
         setEcologie(prevEcologie => prevEcologie + button.getEcolo);
         setSocial(prevSocial => prevSocial + button.getSocial);
         setEconomie(prevEconomie => prevEconomie + button.getEconomie);
+        reponseUser(prevReponseUser => [...prevReponseUser, button.text]);
+        setDate(prevDate => prevDate + button.date);
         setResponse(true);
         setEndOfDiscussion(true);
     };

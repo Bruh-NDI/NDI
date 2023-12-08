@@ -44,25 +44,28 @@ export const dialogues: any = {
     }],
 }
 
-export const boutonsReponses = {
+export const boutonsReponses : any = {
     '1': [
         {
             text: "Investir massivement dans les énergies renouvelables.",
             id: "reponse1",
+            date: 5,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: 8,
             getSocial: 3,
-            getEconomie: -5
+            getEconomie: -5,
         },
         {
             text: "Continuer à dépendre des combustibles fossiles pour maintenir la stabilité économique.",
             id: "reponse2",
+            date: 2,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -6,
             getSocial: 0,
             getEconomie: 7
         },
         {
-            text: " Encourager la conservation d'énergie sans investir dans de nouvelles sources.",
+            text: "Encourager la conservation d'énergie sans investir dans de nouvelles sources.",
             id: "reponse3",
+            date: 1,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -2,
             getSocial: 1,
             getEconomie: 1
@@ -72,6 +75,7 @@ export const boutonsReponses = {
         {
             text: "Mettre en place des zones de protection pour la faune et la flore",
             id: "reponse1",
+            date: 7,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: 9,
             getSocial: 2,
             getEconomie: -3
@@ -79,13 +83,15 @@ export const boutonsReponses = {
         {
             text: "Autoriser la construction sur des zones naturelles pour stimuler l'économie locale.",
             id: "reponse2",
+            date: 4,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -8,
             getSocial: -3,
             getEconomie: 10
         },
         {
-            text: " Ignorer les préoccupations environnementales pour accélérer le développement urbain.",
+            text: "Ignorer les préoccupations environnementales pour accélérer le développement urbain.",
             id: "reponse3",
+            date: 6,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -10,
             getSocial: 0,
             getEconomie: 15
@@ -95,6 +101,7 @@ export const boutonsReponses = {
         {
             text: "Mettre en œuvre des politiques strictes de recyclage et de réduction des déchets.",
             id: "reponse1",
+            date: 5,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: 7,
             getSocial: 3,
             getEconomie: -4
@@ -102,6 +109,7 @@ export const boutonsReponses = {
         {
             text: "Ignorer le problème des plastiques à usage unique pour favoriser l'industrie locale.",
             id: "reponse2",
+            date: 3,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -5,
             getSocial: -2,
             getEconomie: 6
@@ -109,6 +117,7 @@ export const boutonsReponses = {
         {
             text: "Encourager la production de plastiques biodégradables sans politiques strictes.",
             id: "reponse3",
+            date: 4,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: 3,
             getSocial: 1,
             getEconomie: -2
@@ -118,6 +127,7 @@ export const boutonsReponses = {
         {
             text: "Encourager la conservation de l'eau et investir dans des sources alternatives. ",
             id: "reponse1",
+            date: 6,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: 8,
             getSocial: 2,
             getEconomie: -6
@@ -125,6 +135,7 @@ export const boutonsReponses = {
         {
             text: "Exploiter davantage les ressources en eau actuelles pour répondre à la demande.\n",
             id: "reponse2",
+            date: 3,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -4,
             getSocial: 0,
             getEconomie: 5
@@ -132,6 +143,7 @@ export const boutonsReponses = {
         {
             text: "Ignorer les problèmes liés à la consommation d'eau pour favoriser l'industrie.",
             id: "reponse3",
+            date: 5,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -7,
             getSocial: 0,
             getEconomie: 9
@@ -141,6 +153,7 @@ export const boutonsReponses = {
         {
             text: "Développer un réseau de transports publics efficace.",
             id: "reponse1",
+            date: 4,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: 6,
             getSocial: 4,
             getEconomie: -3
@@ -148,6 +161,7 @@ export const boutonsReponses = {
         {
             text: "Continuer à favoriser les voitures individuelles pour soutenir l'industrie automobile.",
             id: "reponse2",
+            date: 2,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -5,
             getSocial: 3,
             getEconomie: 8
@@ -155,6 +169,7 @@ export const boutonsReponses = {
         {
             text: "Ignorer les problèmes liés à la circulation pour se concentrer sur d'autres priorités.",
             id: "reponse3",
+            date: 3,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -8,
             getSocial: -4,
             getEconomie: 10
@@ -164,6 +179,7 @@ export const boutonsReponses = {
         {
             text: "Mettre en place des normes strictes d'émissions pour les industries.",
             id: "reponse1",
+            date: 7,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: 9,
             getSocial: 3,
             getEconomie: -5
@@ -171,6 +187,7 @@ export const boutonsReponses = {
         {
             text: "Ignorer les problèmes environnementaux pour maintenir la compétitivité économique.",
             id: "reponse2",
+            date: 8,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: -10,
             getSocial: -5,
             getEconomie: 12
@@ -178,11 +195,10 @@ export const boutonsReponses = {
         {
             text: "Encourager les industries à adopter des pratiques plus durables sans réglementation stricte.",
             id: "reponse3",
+            date: 4,  // Exemple de valeur, ajustez selon vos besoins
             getEcolo: 2,
             getSocial: 1,
             getEconomie: 3
         }
     ],
-
-}
-
+};

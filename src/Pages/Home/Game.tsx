@@ -5,25 +5,30 @@ import { Discussion } from "../../GameComponents/Discussion/Discussion.tsx";
 import { Personnage } from "../../GameComponents/Personnage/Personnage.tsx";
 import { dialogues, boutonsReponses } from "../../GameComponents/GameBar/data/data.ts";
 import BoutonReponse from "../../GameComponents/BoutonReponse/BoutonReponse.tsx";
+import PopUp from "../../GameComponents/PopUp/PopUp.tsx";
 
 export default function Game() {
-    const [euro, setEuro] = useState(0);
-    const [co2, setCO2] = useState(0);
-    const [social, setSocial] = useState(0);
-    const pathPresident = "public/images/president.png";
-    const pathMinistre = "public/images/ministre.png";
-    const [path, setPath] = useState("/images/president.png");
-    const [endOfDialogue, setEndOfDialogue] = useState<boolean>(false);
-    const [actualDialogue, setActualDialogue] = useState<number>(0);
-    const [actualDiscussion, setActualDiscussion] = useState<number>(0);
-    const [response, setResponse] = useState<boolean>(false);
-    const reponseUser = [];
-
+    const [euro, setEuro] = useState(1)
+    const [co2, setCO2] = useState(1)
+    const [social, setSocial] = useState(1)
+    const [date, setDate] = useState(2023)
+    const pathPresident = "public/images/president.png"
+    const pathMinistre = "public/images/ministre.png"
+    const pathBG = "public/images/bg_intro.jpg"
+    const [path] = "/images/president.png"
+    const [endOfDialogue, setEndOfDialogue] = useState<boolean>(false)
+    const [actualDialogue, setActualDialogue] = useState<number>(0)
+    const [actualDiscussion, setActualDiscussion] = useState<number>(0)
+    const [response, setResponse] = useState<boolean>(false)
+    const [reponseUser, setReponseUser] = useState<string[]>([])
+    const [end, setEnd] = useState<boolean>(false)
     useEffect(() => {
-        if (endOfDialogue && actualDialogue < 5 && response) {
-            setActualDialogue((v) => v + 1);
-            setEndOfDialogue(false);
-            setActualDiscussion(0);
+        if (endOfDialogue && actualDialogue < 6 && response && end === false) {
+            setActualDialogue(v => v + 1)
+            setEndOfDialogue(false)
+            setActualDiscussion(0)
+        } else if (actualDialogue >= 6) {
+            setEnd(true)
         }
     }, [endOfDialogue]);
 
@@ -38,55 +43,67 @@ export default function Game() {
     const BackgroundIMG = () => {
         let moyenne = (euro + co2 + social) / 3;
         let imagePath = "public/images/villes/";
-        console.log(moyenne, euro, co2, social);
-        if (moyenne < -1) {
+        if (moyenne < 0.9) {
             imagePath += "-10.jpg";
-        } else if (moyenne < 0) {
+        } else if (moyenne < 1.3) {
             imagePath += "-2.jpg";
-        } else if (moyenne < 1) {
+        } else if (moyenne < 2.) {
             imagePath += "0.jpg";
-        } else if (moyenne < 2) {
-            imagePath += "10.jpg";
-        } else if (moyenne < 3) {
-            imagePath += "15.jpg";
         } else if (moyenne < 4) {
+            imagePath += "10.jpg";
+        } else if (moyenne <6) {
+            imagePath += "15.jpg";
+        } else if (moyenne < 8) {
             imagePath += "20.jpg";
-        } else if (moyenne < 5) {
+        } else if (moyenne < 10) {
             imagePath += "25.jpg";
-        } else if (moyenne < 6) {
+        } else if (moyenne < 11) {
             imagePath += "28.jpg";
-        } else if (moyenne < 7) {
+        } else if (moyenne < 12) {
             imagePath += "30.jpg";
         } else {
             imagePath += "35.jpg";
         }
         return imagePath;
-    };
+    }
 
-    useEffect(() => {
-        // Update the path value whenever necessary
-        setPath(BackgroundIMG());
-    }, [euro, co2, social]);
+    const textFin = () => {
+        let moyenne = (euro + co2 + social) / 3;
+        console.log(moyenne);
+        let text = "";
+        if (moyenne < 6) {
+            text = "Votre ville est une catastrophe écologique, économique et sociale. Vous avez perdu !";
+        } else if (moyenne < 10) {
+            text = "Votre ville est dans un état moyen. Vous auriez pu faire mieux !";
+        }
+        else {
+            text = "Votre ville est un paradis sur terre. Bravo !";
+        }
+        return text;
+    }
 
+    console.log(reponseUser)
     return (
         <>
-            <GameBar euro={euro} co2={co2} date={2023} />
+            <GameBar euro={euro} co2={co2} social={social} date={date}/>
             <div className="w-full h-screen flex items-center justify-center">
-                <Sprite key={path} id={"background"} path={path} alt={"Un fond d'écran"} height={"full"} width={"full"} />
+                <Sprite id={"background"} path={BackgroundIMG()} alt={"Un fond d'écran"} height={"full"} width={"full"}/>
             </div>
-            <Personnage id={"president"} path={pathPresident} alt={"Un président important"} position={"right"} talking={setTalkingPresident()} />
-            <Personnage id={"ministre"} path={pathMinistre} alt={"Un ministre important"} position={"left"} talking={setTalkingMinistre()} />
-            <Discussion dialogues={dialogues[actualDialogue]} actualDiscussion={actualDiscussion} setActualDiscussion={setActualDiscussion} />
-            {actualDiscussion === dialogues[actualDialogue].length - 1 && (
-                <BoutonReponse
-                    setSocial={setSocial}
-                    setEcolo={setCO2}
-                    setEconomie={setEuro}
-                    id={actualDialogue}
-                    setResponse={setResponse}
-                    setEndOfDiscussion={setEndOfDialogue}
+            {actualDialogue < 6 && <Personnage id={"president"} path={pathPresident} alt={"Un président important"} position={"right"} talking={setTalkingPresident()}/>}
+            {actualDialogue < 6 && <Personnage id={"ministre"} path={pathMinistre} alt={"Un ministre important"} position={"left"} talking={setTalkingMinistre()}/>}
+            {actualDialogue < 6 && <div>
+                {!end && <Discussion dialogues={dialogues[actualDialogue]} actualDiscussion={actualDiscussion} setActualDiscussion={setActualDiscussion}/>}
+                {actualDiscussion === dialogues[actualDialogue].length - 1 && !end && <BoutonReponse setSocial={setSocial} setEcolo={setCO2} setEconomie={setEuro} id={actualDialogue} setResponse={setResponse} setEndOfDiscussion={setEndOfDialogue} reponseUser={setReponseUser} setDate={setDate}/>}
+            </div>}
+            {end && (
+                <PopUp
+                    choices={reponseUser}
+                    valeurEcologie={co2}
+                    valeurEconomie={euro}
+                    valeurSocial={social}
+                    textDeFin={textFin()}
                 />
             )}
         </>
-    );
+    )
 }
