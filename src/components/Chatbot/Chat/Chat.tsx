@@ -37,9 +37,9 @@ export function Chat() {
                 const headers: { [key: string]: string } = {
                     'Content-Type': 'application/json'
                 }
-                if (token.length > 0)
-                    headers["Authorization"] = "Bearer " + token
-                fetch(import.meta.env.VITE_API + "/chatbot", {
+                /* if (token.length > 0)
+                     headers["Authorization"] = "Bearer " + token*/
+                fetch("https://ndi-api.onrender.com/chatbot", {
                     method: "POST",
                     headers,
                     body: JSON.stringify({message: prompt})
