@@ -1,11 +1,14 @@
 import {Container, Title, Text, Button} from '@mantine/core';
 import classes from '../../style/HeroImageRight.module.css';
 import {IconLoadBalancer, IconTemperatureCelsius, IconTemperaturePlus} from "@tabler/icons-react";
+import {Canvas} from "@react-three/fiber";
+import {Effects} from "../Terre/Effects.tsx";
+import {PrimaryScene} from "../Terre/PrimaryScene";
 
 export function HeroImageRight() {
     return (
-        <div className={classes.root}>
-            <Container size="lg">
+        <div className={'relative'}>
+            <Container className={'pointer-events-none'} size="lg" >
                 <div className={classes.inner}>
                     <div className={classes.content}>
                         <Title className={classes.title}>
@@ -37,6 +40,14 @@ export function HeroImageRight() {
                     </div>
                 </div>
             </Container>
+            <div className={'h-full w-full absolute top-0 right-0 z-[1]'}>
+                <Canvas camera={{fov: 45, position: [0, 0, 2], near: 0.1, far: 1000}}>
+                    <Effects/>
+                    {/*<Suspense fallback={<Loading/>}>*/}
+                    <PrimaryScene/>
+                    {/*</Suspense>*/}
+                </Canvas>
+            </div>
         </div>
     );
 }
