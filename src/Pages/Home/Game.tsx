@@ -13,7 +13,7 @@ export default function Game() {
     const [social, setSocial] = useState(1)
     const [date, setDate] = useState(2023)
     const pathPresident = "public/images/president.png"
-    const pathMinistre = "public/images/ministre.png"
+    const pathMinistre = "public/images/ministre-bg.png"
     const pathBG = "public/images/bg_intro.jpg"
     const [path] = "/images/president.png"
     const [endOfDialogue, setEndOfDialogue] = useState<boolean>(false)
