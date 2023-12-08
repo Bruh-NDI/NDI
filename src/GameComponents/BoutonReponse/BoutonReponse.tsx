@@ -19,7 +19,7 @@ function BoutonReponse({setEcolo, setSocial, setEconomie, id , setResponse, setE
     const possibleResponses = boutonsReponses[id+1];
 
     return (
-        <div className="flex flex-col items-center justify-center absolute bottom-[110px] w-full">
+        <div className="flex flex-col items-center justify-center absolute bottom-[110px] w-full zgeg">
             {possibleResponses.map((response, index) => (
                 console.log(response),
                 <ButtonResponse
