@@ -17,7 +17,7 @@ export function HeaderMegaMenu() {
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
     return (
-        <Box pb={20}>
+        <Box pb={0}>
             <header className={classes.header}>
                 <Group justify="space-between" h="100%">
                     <a href="/">
@@ -34,12 +34,6 @@ export function HeaderMegaMenu() {
                             Test
                         </a>
                     </Group>
-
-                    <Group visibleFrom="sm">
-                        <Button variant="default">Log in</Button>
-                        <Button>Sign up</Button>
-                    </Group>
-
                     <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
                 </Group>
             </header>
@@ -67,11 +61,6 @@ export function HeaderMegaMenu() {
                     </a>
 
                     <Divider my="sm" />
-
-                    <Group justify="center" grow pb="xl" px="md">
-                        <Button variant="default">Log in</Button>
-                        <Button>Sign up</Button>
-                    </Group>
                 </ScrollArea>
             </Drawer>
         </Box>
