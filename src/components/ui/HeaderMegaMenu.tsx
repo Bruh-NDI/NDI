@@ -16,7 +16,7 @@ export function HeaderMegaMenu() {
                     </Link>
                     <Group h="100%" gap={0} visibleFrom="sm">
                         <Link to="/" className={classes.link}>
-                            Home
+                            Accueil
                         </Link>
                         <Link to="/game" className={classes.link}>
                             Game
@@ -47,10 +47,13 @@ export function HeaderMegaMenu() {
                     <Divider my="sm"/>
 
                     <Link to="/" className={classes.link}>
-                        Home
+                        Accueil
                     </Link>
                     <Link to="/game" className={classes.link}>
                         Game
+                    </Link>
+                    <Link to="/data" className={classes.link}>
+                        Données
                     </Link>
                     <Link to="/about" className={classes.link}>
                         A propos
