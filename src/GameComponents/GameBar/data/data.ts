@@ -15,7 +15,7 @@ export const dialogues: any = {
         id: "6"
     }],
     '2': [{text:"Malgrès tous nos efforts pour préserver l'environnement nous faisont face à de nombreuses incivilités", nomPersonnage: "Premier Ministre", id:"7"},
-        {text: "Saperlipopette !!! si seulement les gens pouvaient faire preuve d'un peu d'efforts individuels mon travail serait plus facile.", nomPersonnage: "President", id: "8"},
+        {text: "Saperlipopette !!! Si seulement les gens pouvaient faire preuve d'un peu d'efforts individuels mon travail serait plus facile.", nomPersonnage: "President", id: "8"},
         {
         text: "Les déchets plastiques sont un problème croissant dans votre ville. Comment souhaitez-vous aborder cette question pour minimiser l'impact écologique ?",
         nomPersonnage: "Premier Ministre",
