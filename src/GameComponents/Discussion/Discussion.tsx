@@ -13,12 +13,10 @@ export type QuestionProps = {
 
 export function Discussion({
                                dialogues,
-                               setEndOfDialogue,
                                 actualDiscussion,
                                 setActualDiscussion
                            }: {
     dialogues: any;
-    setEndOfDialogue: React.Dispatch<React.SetStateAction<boolean>>;
     actualDiscussion: number;
     setActualDiscussion: React.Dispatch<React.SetStateAction<number>>;
 }) {
@@ -26,13 +24,10 @@ export function Discussion({
     const showNext = () => {
         if (actualDiscussion < dialoguesArray.length - 1)
             setActualDiscussion(v => v + 1);
-        else setEndOfDialogue(true);
     };
 
     const dialoguesArray = Object.keys(dialogues).map((key) => dialogues[key]);
 
-    console.log(actualDiscussion);
-    console.log(dialoguesArray[actualDiscussion]);
     return (
         <div className=" parent-container flex items-center justify-center mx-auto absolute bottom-10 h-[100px] w-full">
             <Question question={dialoguesArray[actualDiscussion]} showNext={showNext}/>
