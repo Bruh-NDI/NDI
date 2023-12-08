@@ -13,7 +13,6 @@ export function GameBar({euro, co2}: InfoNavabar) {
                 date
                 <Compteur Value={euro} Type="€" id="euro"/>
                 <Compteur Value={co2} Type="kg/Atmos" id="CO2"/>
-                nomVille
             </div>
         </div>
     )
