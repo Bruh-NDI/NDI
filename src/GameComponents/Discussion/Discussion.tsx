@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {Question} from "./Question.tsx";
 
 export type ArrayOfQuestions = {
@@ -13,8 +13,8 @@ export type QuestionProps = {
 
 export function Discussion({
                                dialogues,
-                                actualDiscussion,
-                                setActualDiscussion
+                               actualDiscussion,
+                               setActualDiscussion
                            }: {
     dialogues: any;
     actualDiscussion: number;
@@ -29,7 +29,8 @@ export function Discussion({
     const dialoguesArray = Object.keys(dialogues).map((key) => dialogues[key]);
 
     return (
-        <div className=" parent-container flex items-center justify-center mx-auto absolute bottom-1 h-[100px] w-full">
+        <div
+            className="select-none parent-container flex items-center justify-center mx-auto absolute bottom-1 h-[100px] w-full">
             <Question question={dialoguesArray[actualDiscussion]} showNext={showNext}/>
         </div>
     );
