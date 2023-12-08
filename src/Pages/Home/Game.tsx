@@ -47,7 +47,7 @@ export default function Game() {
             imagePath += "-10.jpg";
         } else if (moyenne < 1.3) {
             imagePath += "-2.jpg";
-        } else if (moyenne < 2.) {
+        } else if (moyenne < 2.6) {
             imagePath += "0.jpg";
         } else if (moyenne < 4) {
             imagePath += "10.jpg";
@@ -83,6 +83,7 @@ export default function Game() {
     }
 
     console.log(reponseUser)
+    console.log(end)
     return (
         <>
             <GameBar euro={euro} co2={co2} social={social} date={date}/>
@@ -95,7 +96,7 @@ export default function Game() {
                 {!end && <Discussion dialogues={dialogues[actualDialogue]} actualDiscussion={actualDiscussion} setActualDiscussion={setActualDiscussion}/>}
                 {actualDiscussion === dialogues[actualDialogue].length - 1 && !end && <BoutonReponse setSocial={setSocial} setEcolo={setCO2} setEconomie={setEuro} id={actualDialogue} setResponse={setResponse} setEndOfDiscussion={setEndOfDialogue} reponseUser={setReponseUser} setDate={setDate}/>}
             </div>}
-            {end && (
+            {end &&
                 <PopUp
                     choices={reponseUser}
                     valeurEcologie={co2}
@@ -103,7 +104,7 @@ export default function Game() {
                     valeurSocial={social}
                     textDeFin={textFin()}
                 />
-            )}
+            }
         </>
     )
 }
