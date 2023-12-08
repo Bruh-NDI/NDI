@@ -86,6 +86,10 @@ export default function Game() {
     console.log(end)
     return (
         <>
+            <div className={'max-md:flex hidden'}>
+                <p className={'text-white text-2xl mx-auto'}>Veuillez utiliser un écran plus grand</p>
+            </div>
+        <div className={'max-h-[calc(100vh-60px)] overflow-y-hidden max-md:hidden'}>
             <GameBar euro={euro} co2={co2} social={social} date={date}/>
             <div className="w-full h-screen flex items-center justify-center">
                 <Sprite id={"background"} path={BackgroundIMG()} alt={"Un fond d'écran"} height={"full"} width={"full"}/>
@@ -105,6 +109,7 @@ export default function Game() {
                     textDeFin={textFin()}
                 />
             }
+        </div>
         </>
     )
 }

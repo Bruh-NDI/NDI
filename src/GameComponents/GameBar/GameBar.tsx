@@ -11,7 +11,7 @@ type InfoNavabar = {
 
 export function GameBar({euro, co2, social, date}: InfoNavabar) {
     return (
-        <div className="w-full h-full flex items-center justify-center flex-col pb-4">
+        <div className="w-full h-full flex items-center justify-center flex-col pb-4 z-50">
             <div className="container mx-auto flex justify-between items-center py-2 mb-2">
                 <Compteur Value={social + " million"} title={"Habitants"}/>
                 <Compteur Value={euro + "€"} title={"PIB"}/>

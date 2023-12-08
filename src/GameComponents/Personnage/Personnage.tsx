@@ -62,18 +62,18 @@ export function Personnage({
                 src={pathBG}
                 alt={alt}
                 draggable={false}
-                className={`transition-all absolute bottom-0 -translate-x-[90px] ${
+                className={`transition-all absolute bottom-0 ${id!=='president' ? '-translate-x-[90px]' : ''} ${
                     isOnRight ? 'right-0' : 'left-0'
-                } ${talking ? 'h-1/3' : 'filter grayscale h-[25%]'}`}
+                } ${talking ? 'h-[40%]' : 'filter grayscale h-[30%]'}`}
             />
             {talking && (
                 <img
                     src={pathMO}
                     alt={alt}
                     draggable={false}
-                    className={`transition-all absolute bottom-0 -translate-x-[90px] ${
+                    className={`transition-all absolute bottom-0 ${id!=='president' ? '-translate-x-[90px]' : ''} ${
                         isOnRight ? 'right-0' : 'left-0'
-                    } ${talking ? 'h-1/3' : 'filter grayscale h-[25%]'} ${
+                    } ${talking ? 'h-[40%]' : 'filter grayscale h-[30%]'} ${
                         isMouthOpen && talking ? 'opacity-100' : 'opacity-0'
                     }`}
                 />)
@@ -82,9 +82,9 @@ export function Personnage({
                 src={pathMC}
                 alt={alt}
                 draggable={false}
-                className={`transition-all absolute bottom-0 -translate-x-[90px] ${
+                className={`transition-all absolute bottom-0 ${id!=='president' ? '-translate-x-[90px]' : ''} ${
                     isOnRight ? 'right-0' : 'left-0'
-                } ${talking ? 'h-1/3' : 'filter grayscale h-[25%]'} ${
+                } ${talking ? 'h-[40%]' : 'filter grayscale h-[30%]'} ${
                     isMouthOpen && talking ? 'opacity-0' : 'opacity-100'
                 }`}
             />
@@ -92,9 +92,9 @@ export function Personnage({
                 src={pathEO}
                 alt={alt}
                 draggable={false}
-                className={`transition-all absolute bottom-0 -translate-x-[90px] ${
+                className={`transition-all absolute bottom-0 ${id!=='president' ? '-translate-x-[90px]' : ''} ${
                     isOnRight ? 'right-0' : 'left-0'
-                } ${talking ? 'h-1/3' : 'filter grayscale h-[25%]'} ${
+                } ${talking ? 'h-[40%]' : 'filter grayscale h-[30%]'} ${
                     isEyesOpen ? 'opacity-0' : 'opacity-100'
                 }`}
             />
