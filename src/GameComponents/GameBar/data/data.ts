@@ -7,35 +7,40 @@ export const dialogues: any = {
             nomPersonnage: "Premier Ministre",
             id: "3"
         }],
-    '1': [{text: "Monsieur le président grâce à votre choix notre ville est devenu extrèmement atractive, de nombreux nouveux habitants arrivent !", nomPersonnage: "Premier Ministre", id:"4"},
+    '1': [{text: "Monsieur le président grâce à votre choix notre ville est devenu extrèmement atractive, de nombreux nouveaux habitants arrivent !", nomPersonnage: "Premier Ministre", id:"4"},
+        {text: "Il faut croire que je ne suis pas si mauvais comme président.", nomPersonnage: "President", id: "5"},
         {
-        text: "La biodiversité de votre ville est menacée par l'expansion urbaine. Comment souhaitez-vous gérer le développement tout en préservant l'environnement ?",
+        text: "Certes mais la biodiversité de votre ville est menacée par l'expansion urbaine. Comment souhaitez-vous gérer le développement tout en préservant l'environnement ?",
         nomPersonnage: "Premier Ministre",
-        id: "5"
+        id: "6"
     }],
-    '2': [{text:"Malgrès tous nos efforts pour préserver l'environnement nous faisont face à de nombreuses incivilités", nomPersonnage: "Premier Ministre", id:"6"},
+    '2': [{text:"Malgrès tous nos efforts pour préserver l'environnement nous faisont face à de nombreuses incivilités", nomPersonnage: "Premier Ministre", id:"7"},
+        {text: "Saperlipopette !!! si seulement les gens pouvaient faire preuve d'un peu d'efforts individuels mon travail serait plus facile", nomPersonnage: "President", id: "8"},
         {
         text: "Les déchets plastiques sont un problème croissant dans votre ville. Comment souhaitez-vous aborder cette question pour minimiser l'impact écologique ?",
         nomPersonnage: "Premier Ministre",
-        id: "7"
+        id: "9"
     }],
-    '3': [{text:"L'accroissement de la population entraine de plus grande consommation de ressources au sein de notre ville", nomPersonnage: "Premier Ministre", id:"8"},
+    '3': [{text:"L'accroissement de la population entraine de plus grande consommation de ressources au sein de notre ville", nomPersonnage: "Premier Ministre", id:"10"},
+        {text: "Il faut faire quelque chose ou nous risquons la pénurie !", nomPersonnage: "President", id: "11"},
         {
         text: "La demande en eau de votre ville excède la capacité des ressources locales. Comment souhaitez-vous gérer cette crise tout en préservant l'écosystème aquatique ? \n",
         nomPersonnage: "Premier Ministre",
-        id: "9"
+        id: "12"
     }],
-    '4': [{text:"Votre ville est de plus en plus fourmillante de vie, le travail y est prospère. Cependant cela peut engendrer de lourdes conséquences sur le climat", nomPersonnage: "Premier Ministre", id:"10"},
+    '4': [{text:"Votre ville est de plus en plus fourmillante de vie, le travail y est prospère. Cependant cela peut engendrer de lourdes conséquences sur le climat.", nomPersonnage: "Premier Ministre", id:"13"},
+        {text:"La rançon de la gloire comme on dit.", nomPersonnage: "President", id:"14"},
         {
         text: "Les transports individuels contribuent fortement aux émissions de carbone de votre ville. Comment souhaitez-vous encourager des modes de déplacement plus durables ? ",
         nomPersonnage: "Premier Ministre",
-        id: "11"
+        id: "15"
     }],
-    '5': [{text:"Vos effort ont permit de faire évoluer la situation mais le problème d'émission de gaz à effet de serra n'est pas encore résolu", nomPersonnage: "Premier Ministre", id:"12"},
+    '5': [{text:"Vos effort ont permit de faire évoluer la situation mais le problème d'émission de gaz à effet de serra n'est pas encore résolu.", nomPersonnage: "Premier Ministre", id:"16"},
+        {text:"Comment ça ? Nous avons prit des mesure contre la polution lié aux véhicules, que peut-on faire de plus ?", nomPersonnage: "President", id:"17"},
         {
         text: "L'industrie locale est une source majeure de pollution. Comment souhaitez-vous équilibrer le soutien économique et la protection de l'environnement ? \n",
         nomPersonnage: "Premier Ministre",
-        id: "13"
+        id: "18"
     }],
 }
 
