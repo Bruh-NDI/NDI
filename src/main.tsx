@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import Home from './Pages/Home/Home.tsx'
+import {Data} from './Pages/Data/Data.tsx'
 
 import "./main.css"
 import '@mantine/core/styles.css';
@@ -33,6 +34,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             <Routes>
                 <Route path="/" element={<Layout/>}>
                     <Route path={"/"} element={<Home/>}/>
+                    <Route path={"/data"} element={<Data/>}/>
                     <Route path={"/game"} element={<Game/>}/>
                     <Route path={"/about"} element={<About/>}/>
                 </Route>
