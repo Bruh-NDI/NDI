@@ -1,6 +1,5 @@
 import React from 'react';
-import {Card} from "@mantine/core";
-import {Link} from "react-router-dom";
+import {Button, Card} from "@mantine/core";
 
 type PopUpProps = {
     choices: string[];
@@ -34,13 +33,16 @@ const PopUp: React.FC<PopUpProps> = ({choices, valeurEcologie, valeurEconomie, v
                     </ul>
                     <h3>Résultats :</h3>
                     <div className="flex justify-between space-x-3 p-5">
-                        <p className="rounded-md p-2 w-fit bg-green-200 text-green-700">Valeur Écologie : {valeurEcologie}</p>
-                        <p className="rounded-md p-2 w-fit bg-yellow-200 text-yellow-700">Valeur Économie : {valeurEconomie}</p>
-                        <p className="rounded-md p-2 w-fit bg-blue-200 text-blue-700">Valeur Sociale : {valeurSocial}</p>
+                        <p className="rounded-md p-2 w-fit bg-green-200 text-green-700">Valeur Écologie
+                            : {valeurEcologie}</p>
+                        <p className="rounded-md p-2 w-fit bg-yellow-200 text-yellow-700">Valeur Économie
+                            : {valeurEconomie}</p>
+                        <p className="rounded-md p-2 w-fit bg-blue-200 text-blue-700">Valeur Sociale
+                            : {valeurSocial}</p>
                     </div>
                     <h3>{textDeFin}</h3>
                 </div>
-                <Link to={"/"} className="rounded-md p-2 w-fit bg-slate-200 text-black ml-[85%]">Terminer</Link>
+                <Button component={"a"} href={"/"}>Terminer</Button>
             </Card>
         </div>
     );
