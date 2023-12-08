@@ -1,3 +1,5 @@
+import {Chat} from "../../components/Chatbot/Chat/Chat.tsx";
+
 import {HeroImageRight} from "../../components/ui/HeroImageRight.tsx";
 import {FeaturesCards} from "../../components/ui/FeaturesCards.tsx";
 import {FaqSimple} from "../../components/ui/FaqSimple.tsx";
@@ -10,6 +12,8 @@ function Home() {
                 <FeaturesCards/>
                 <FaqSimple/>
             </div>
+            <p>Home</p>
+            <Chat/>
         </>
     )
 }
