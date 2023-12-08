@@ -20,7 +20,7 @@ export default function Game() {
     const [actualDialogue, setActualDialogue] = useState<number>(0)
     const [actualDiscussion, setActualDiscussion] = useState<number>(0)
     const [response, setResponse] = useState<boolean>(false)
-    const [reponseUser, setReponseUser] = useState<string[]>([])
+    const [reponseUser, setReponseUser] = useState<any[]>([])
     const [end, setEnd] = useState<boolean>(false)
     useEffect(() => {
         if (endOfDialogue && actualDialogue < 6 && response && end === false) {
@@ -41,7 +41,7 @@ export default function Game() {
     };
 
     const BackgroundIMG = () => {
-        let moyenne = (euro + co2 + social) / 3;
+        let moyenne = (euro - co2 + social) / 3;
         let imagePath = "public/images/villes/";
         if (moyenne < 1.2) {
             imagePath += "-10.jpg";
@@ -68,8 +68,7 @@ export default function Game() {
     }
 
     const textFin = () => {
-        let moyenne = (euro + co2 + social) / 3;
-        console.log(moyenne);
+        let moyenne = (euro - co2 + social) / 3;
         let text = "";
         if (moyenne < 4) {
             text = "Votre ville est une catastrophe écologique, économique et sociale. Vous avez perdu !";
@@ -82,8 +81,6 @@ export default function Game() {
         return text;
     }
 
-    console.log(reponseUser)
-    console.log(end)
     return (
         <>
             <div className={'max-md:flex hidden'}>

@@ -7,7 +7,7 @@ type ButtonResponseProps = {
     setSocial: React.Dispatch<React.SetStateAction<number>>;
     setEconomie: React.Dispatch<React.SetStateAction<number>>;
     button: ButtonProps;
-    reponseUser: React.Dispatch<React.SetStateAction<string[]>>;
+    reponseUser: React.Dispatch<React.SetStateAction<any>>;
     setDate: React.Dispatch<React.SetStateAction<number>>;
 };
 
@@ -18,14 +18,15 @@ export type ButtonProps = {
     getEcolo: number;
     getSocial: number;
     getEconomie: number;
+    correct: boolean;
 };
 
 export function ButtonResponse({ setResponse, setEndOfDiscussion, setEcologie, setSocial, setEconomie, button, reponseUser, setDate } : ButtonResponseProps) {
     const updateValue = () => {
-        setEcologie(prevEcologie => prevEcologie + button.getEcolo);
+        setEcologie(prevEcologie => prevEcologie - button.getEcolo);
         setSocial(prevSocial => prevSocial + button.getSocial);
         setEconomie(prevEconomie => prevEconomie + button.getEconomie);
-        reponseUser(prevReponseUser => [...prevReponseUser, button.text]);
+        reponseUser(prevReponseUser => [...prevReponseUser, button]);
         setDate(prevDate => prevDate + button.date);
         setResponse(true);
         setEndOfDiscussion(true);

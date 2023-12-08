@@ -10,7 +10,7 @@ type BoutonReponseProps = {
     id: number;
     setResponse: React.Dispatch<React.SetStateAction<boolean>>;
     setEndOfDiscussion: React.Dispatch<React.SetStateAction<boolean>>;
-    reponseUser: React.Dispatch<React.SetStateAction<string[]>>;
+    reponseUser: React.Dispatch<React.SetStateAction<any[]>>;
     setDate: React.Dispatch<React.SetStateAction<number>>;
 }
 
