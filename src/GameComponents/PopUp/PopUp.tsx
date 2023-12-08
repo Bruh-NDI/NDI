@@ -17,20 +17,22 @@ const PopUp: React.FC<PopUpProps> = ({ choices, valeurEcologie, valeurEconomie, 
     };
 
     return (
-        <div className="popup">
-            <h2>Résumé de vos choix :</h2>
-            <ul>
-                {choices.map((choice, index) => (
-                    <li key={index}>
-                        {choice} - {isCorrectAnswer(choice) ? 'Correct' : 'Incorrect'}
-                    </li>
-                ))}
-            </ul>
-            <h3>Résultats :</h3>
-            <p>Valeur Écologie : {valeurEcologie}</p>
-            <p>Valeur Économie : {valeurEconomie}</p>
-            <p>Valeur Sociale : {valeurSocial}</p>
-            <h3>{textDeFin}</h3>
+        <div className="w-full h-full flex items-center justify-center">
+            <div className="w-2/3 h-2/3 absolute bottom-[10%] flex column items-center justify-center bg-white p-4 rounded shadow-lg text-black">
+                <h2>Résumé de vos choix :</h2>
+                <ul>
+                    {choices.map((choice, index) => (
+                        <li key={index}>
+                            {choice} - {isCorrectAnswer(choice) ? 'Correct' : 'Incorrect'}
+                        </li>
+                    ))}
+                </ul>
+                <h3>Résultats :</h3>
+                <p>Valeur Écologie : {valeurEcologie}</p>
+                <p>Valeur Économie : {valeurEconomie}</p>
+                <p>Valeur Sociale : {valeurSocial}</p>
+                <h3>{textDeFin}</h3>
+            </div>
         </div>
     );
 };
