@@ -15,13 +15,13 @@ export const dialogues: any = {
         id: "6"
     }],
     '2': [{text:"Malgrès tous nos efforts pour préserver l'environnement nous faisont face à de nombreuses incivilités", nomPersonnage: "Premier Ministre", id:"7"},
-        {text: "Saperlipopette !!! si seulement les gens pouvaient faire preuve d'un peu d'efforts individuels mon travail serait plus facile", nomPersonnage: "President", id: "8"},
+        {text: "Saperlipopette !!! si seulement les gens pouvaient faire preuve d'un peu d'efforts individuels mon travail serait plus facile.", nomPersonnage: "President", id: "8"},
         {
         text: "Les déchets plastiques sont un problème croissant dans votre ville. Comment souhaitez-vous aborder cette question pour minimiser l'impact écologique ?",
         nomPersonnage: "Premier Ministre",
         id: "9"
     }],
-    '3': [{text:"L'accroissement de la population entraine de plus grande consommation de ressources au sein de notre ville", nomPersonnage: "Premier Ministre", id:"10"},
+    '3': [{text:"L'accroissement de la population entraine de plus grande consommation de ressources au sein de notre ville.", nomPersonnage: "Premier Ministre", id:"10"},
         {text: "Il faut faire quelque chose ou nous risquons la pénurie !", nomPersonnage: "President", id: "11"},
         {
         text: "La demande en eau de votre ville excède la capacité des ressources locales. Comment souhaitez-vous gérer cette crise tout en préservant l'écosystème aquatique ? \n",
